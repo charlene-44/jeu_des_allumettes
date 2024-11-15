@@ -21,23 +21,23 @@ for (let i = 0; i < 50; i++) {
     allumettesImageConteneur.appendChild(img);
   }
   
+
   function supprimerLesImagesAllumettes(nombreARetirer) {
-    for (let i = 0; i < nombreARetirer; i++) {
-      if (allumettesImageConteneur.firstChild) {
-          allumettesImageConteneur.removeChild(allumettesImageConteneur.firstChild);
-      }
+  const totalImages = allumettesImageConteneur.children.length;
+
+  for (let i = totalImages - 1; i >= totalImages - nombreARetirer && i >= 0; i--) {
+    allumettesImageConteneur.removeChild(allumettesImageConteneur.children[i]);
   }
 
-  // Supprime toutes les images restantes si `nombreAllumettesTotal` est à zéro
-
-  if (nombreAllumettesTotal >= 0) {
-    while (allumettesImageConteneur.children.length > 0) {
+  // Si le total est zéro, supprime tout le reste (au cas où)
+  if (nombreAllumettesTotal <= 0) {
+    while (allumettesImageConteneur.firstChild) {
       allumettesImageConteneur.removeChild(allumettesImageConteneur.firstChild);
     }
   }
-  console.log(nombreAllumettesTotal);
 }
 
+    
 
   
 // Vérifie la victoire ou la défaite
