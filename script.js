@@ -36,7 +36,6 @@ for (let i = 0; i < 50; i++) {
     }
   }
 }
-console.log(`Avant retrait : ${nombreAllumettesTotal}`);
 
 
 // Vérifie la victoire ou la défaite
@@ -44,10 +43,10 @@ function gagneOuPerdu() {
   // Vérifie que le nombre d'allumettes restantes soit supérieur ou égal à 0 pour savoir si l'utilisateur a gagné ou perdu
   if (nombreAllumettesTotal === 0 && allumettesImageConteneur.children.length === 0) {
     messageGagneOuPerdu.innerHTML = "Vous avez gagné !";
-  console.log(nombreAllumettesTotal);
+ 
   } else if (nombreAllumettesTotal > 0){
       messageGagneOuPerdu.innerHTML = "Continuez le jeu !";
-      console.log(nombreAllumettesTotal);
+      
   } else {
     messageGagneOuPerdu.innerHTML = "Vous avez perdu !";
     
@@ -78,7 +77,7 @@ function retirerAllumettes(nombreARetirer) {
 
   // Mise à jour du nombre total d'allumettes et du message
   nombreAllumettesTotal -= nombreARetirer;
-  console.log(`Après retrait : ${nombreAllumettesTotal}`);
+  
   nombreAllumettes.innerHTML = `${nombreAllumettesTotal} allumettes restantes`;
 
   // Vérifie que le joueur ne puisse pas retirer plus d'allumettes que le nombre d'allumettes restantes
