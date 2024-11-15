@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: rgb(6, 4, 14); */
+    /* color: white; */
+    gap: 50px;
+}
+
+main {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 50px;
+
+}
+    
+
+
+.allumettes {
+    height : 150px;
+}
+
+#allumettes-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 60vh;
+}
